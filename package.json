@@ -1,7 +1,7 @@
 {
   "name": "dsh-markdown-input",
-  "version": "1.0.0",
-  "description": "Markdown list continuation and syntax hints for the DSH composer.",
+  "version": "1.1.0",
+  "description": "Markdown input for the DSH composer: list continuation, list and task glyphs, inline formatting, fenced code highlighting.",
   "type": "module",
   "license": "Apache-2.0",
   "author": "Kyan <kyanrayg@gmail.com>",
@@ -11,7 +11,14 @@
   },
   "homepage": "https://github.com/kyanray-dev/dsh-markdown-input#readme",
   "bugs": "https://github.com/kyanray-dev/dsh-markdown-input/issues",
-  "keywords": ["dsh", "dsh-plugin", "markdown", "composer", "list"],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "markdown",
+    "composer",
+    "list",
+    "syntax-highlighting"
+  ],
   "icon": "./icon.svg",
   "exports": {
     ".": "./index.js",
@@ -27,11 +34,15 @@
     "locale/*.json"
   ],
   "dsh": {
-    "bundle": { "patch": "./cordis.patch.yml" },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
     "client": {
       "platform": "web",
       "immediately": true,
-      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
     }
   }
 }
